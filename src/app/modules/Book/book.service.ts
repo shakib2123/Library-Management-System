@@ -14,7 +14,18 @@ const getAllBooksFromDB = async () => {
   return result;
 };
 
+const getBookByIdFromDB = async (bookId: string) => {
+  const result = await prisma.book.findUnique({
+    where: {
+      bookId,
+    },
+  });
+
+  return result;
+};
+
 export const BookService = {
   createBookIntoDB,
   getAllBooksFromDB,
+  getBookByIdFromDB,
 };
