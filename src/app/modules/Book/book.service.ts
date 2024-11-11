@@ -8,7 +8,13 @@ const createBookIntoDB = async (data: Book) => {
 
   return result;
 };
+const getAllBooksFromDB = async () => {
+  const result = await prisma.book.findMany();
+
+  return result;
+};
 
 export const BookService = {
   createBookIntoDB,
+  getAllBooksFromDB,
 };
