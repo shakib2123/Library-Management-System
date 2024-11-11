@@ -24,8 +24,20 @@ const getBookByIdFromDB = async (bookId: string) => {
   return result;
 };
 
+const updateBookIntoDB = async (bookId: string, data: Partial<Book>) => {
+  const result = await prisma.book.update({
+    where: {
+      bookId,
+    },
+    data,
+  });
+
+  return result;
+};
+
 export const BookService = {
   createBookIntoDB,
   getAllBooksFromDB,
   getBookByIdFromDB,
+  updateBookIntoDB,
 };
