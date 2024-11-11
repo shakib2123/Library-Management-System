@@ -15,6 +15,18 @@ const createMember = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllMembers = catchAsync(async (req: Request, res: Response) => {
+  const result = await MemberService.getAllMembersFromDB();
+
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: "Members retrieved successfully",
+    data: result,
+  });
+});
+
 export const MemberController = {
   createMember,
+  getAllMembers,
 };
