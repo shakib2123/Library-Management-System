@@ -12,5 +12,6 @@ router.post(
 );
 
 router.get("/", MemberController.getAllMembers);
+router.get("/:memberId", MemberController.getMemberById);
 
 export const MemberRoutes = router;
