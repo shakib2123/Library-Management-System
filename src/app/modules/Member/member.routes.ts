@@ -12,6 +12,13 @@ router.post(
 );
 
 router.get("/", MemberController.getAllMembers);
+
 router.get("/:memberId", MemberController.getMemberById);
+
+router.put(
+  "/:memberId",
+  validateRequest(MemberValidation.updateMemberValidationSchema),
+  MemberController.updateMember
+);
 
 export const MemberRoutes = router;
