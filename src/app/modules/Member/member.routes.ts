@@ -21,4 +21,6 @@ router.put(
   MemberController.updateMember
 );
 
+router.delete("/:memberId", MemberController.deleteMember);
+
 export const MemberRoutes = router;
