@@ -1,3 +1,5 @@
+import httpStatus from "http-status";
+import AppError from "../../utils/AppError";
 import prisma from "../../utils/prisma";
 
 const returnBook = async (borrowId: string) => {
@@ -8,11 +10,11 @@ const returnBook = async (borrowId: string) => {
   });
 
   if (!borrow) {
-    throw new Error("Book not found");
+    throw new AppError(httpStatus.NOT_FOUND, "Book not found");
   }
 
   if (borrow.returnDate) {
-    throw new Error("Book already returned");
+    throw new AppError(httpStatus.BAD_REQUEST, "Book already returned");
   }
 
   const result = await prisma.borrowRecord.update({
