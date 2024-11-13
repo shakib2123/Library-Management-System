@@ -1,7 +1,5 @@
 # Library Management System API
 
-## Project Description
-
 The Library Management System API is a backend API designed for managing library
 operations. It provides CRUD operations for books, members, and borrow records,
 with additional functionality for borrowing and returning books. This API
@@ -20,37 +18,6 @@ management, and overdue tracking.
 - **PostgreSQL:** Relational database system
 - **TypeScript:** Static typing for JavaScript
 - **Zod:** Schema validation for TypeScript
-
-## Key Features & Functionality
-
-### Book CRUD Operations
-
-- **Create Book:** `POST /api/books`
-- **Read All Books:** `GET /api/books`
-- **Read Book by ID:** `GET /api/books/:bookId`
-- **Update Book:** `PUT /api/books/:bookId`
-- **Delete Book:** `DELETE /api/books/:bookId`
-
-### Member CRUD Operations
-
-- **Create Member:** `POST /api/members`
-- **Read All Members:** `GET /api/members`
-- **Read Member by ID:** `GET /api/members/:memberId`
-- **Update Member:** `PUT /api/members/:memberId`
-- **Delete Member:** `DELETE /api/members/:memberId`
-
-### Borrow & Return Books
-
-- **Borrow a Book:** `POST /api/borrow`
-- **Return a Book:** `POST /api/return`
-
-### Overdue Borrow List
-
-- **Track Overdue Books:** `GET /api/borrow/overdue`
-
-## Known Issues / Bugs
-
-- None reported.
 
 ## Setup Instructions
 
@@ -82,3 +49,34 @@ npx prisma migrate dev
 ```bash
 npm run dev
 ```
+
+## Key Features & Functionality
+
+### Book CRUD Operations
+
+- **Create Book:** `POST /api/books`
+- **Read All Books:** `GET /api/books`
+- **Read Book by ID:** `GET /api/books/:bookId`
+- **Update Book:** `PUT /api/books/:bookId`
+- **Delete Book:** `DELETE /api/books/:bookId`
+
+### Member CRUD Operations
+
+- **Create Member:** `POST /api/members`
+- **Read All Members:** `GET /api/members`
+- **Read Member by ID:** `GET /api/members/:memberId`
+- **Update Member:** `PUT /api/members/:memberId`
+- **Delete Member:** `DELETE /api/members/:memberId`
+
+### Borrow & Return Books
+
+- **Borrow a Book:** `POST /api/borrow`
+- **Return a Book:** `POST /api/return`
+
+### Overdue Borrow List
+
+- **Track Overdue Books:** `GET /api/borrow/overdue`
+
+## Known Issues / Bugs
+
+- None reported.
