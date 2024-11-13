@@ -45,7 +45,12 @@ const updateMemberIntoDB = async (memberId: string, data: Partial<Member>) => {
     data,
   });
 
-  return result;
+  return {
+    name: result.name,
+    memberId: result.memberId,
+    email: result.email,
+    phone: result.phone,
+  };
 };
 
 const deleteMemberFromDB = async (memberId: string) => {
