@@ -1,6 +1,7 @@
 import { BorrowRecord } from "@prisma/client";
 import prisma from "../../utils/prisma";
 
+// create borrow
 const createBorrowIntoDB = async (data: BorrowRecord) => {
   const result = await prisma.borrowRecord.create({
     data,
@@ -13,6 +14,7 @@ const createBorrowIntoDB = async (data: BorrowRecord) => {
   };
 };
 
+// get overdue borrows
 const getOverdueBorrows = async () => {
   const result = await prisma.borrowRecord.findMany({
     where: {
