@@ -14,14 +14,14 @@ management, and overdue tracking.
 
 ## Technology Stack & Packages
 
-- Node.js: Server runtime environment
-- Express.js: Web application framework
-- Prisma ORM: Object-Relational Mapper for interacting with PostgreSQL
-- PostgreSQL: Relational database system
-- TypeScript: Static typing for JavaScript
-- Zod: Schema validation for TypeScript
+- **Node.js:** Server runtime environment
+- **Express.js:** Web application framework
+- **Prisma ORM:** Object-Relational Mapper for interacting with PostgreSQL
+- **PostgreSQL:** Relational database system
+- **TypeScript:** Static typing for JavaScript
+- **Zod:** Schema validation for TypeScript
 
-## Key Features & Endpoints
+## Key Features & Functionality
 
 ### Book CRUD Operations
 
@@ -48,17 +48,9 @@ management, and overdue tracking.
 
 - **Track Overdue Books:** `GET /api/borrow/overdue`
 
-## Error Handling
+## Known Issues / Bugs
 
-In case of errors, the API returns a response structure as follows:
-
-```json
-{
-  "success": false,
-  "status": <HTTP_STATUS_CODE>,
-  "message": "<Error message>"
-}
-```
+- None reported.
 
 ## Setup Instructions
 
@@ -90,7 +82,3 @@ npx prisma migrate dev
 ```bash
 npm run dev
 ```
-
-## Known Issues / Bugs
-
-- None reported.
