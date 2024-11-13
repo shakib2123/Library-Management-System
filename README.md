@@ -10,7 +10,7 @@ management, and overdue tracking.
 
 ## Live URL
 
-[Deployed API Link](https://library-management-system-api.onrender.com/)
+[Deployed API Link](https://library-management-system-ten-pi.vercel.app/)
 
 ## Technology Stack & Packages
 
